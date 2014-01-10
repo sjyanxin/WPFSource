@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C8D43B9-715B-4D17-A684-7A4D23EF59AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsBase</RootNamespace>
+    <AssemblyName>WindowsBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MS\Internal\AssemblyHelper.cs" />
+    <Compile Include="MS\Internal\AvTrace.cs" />
+    <Compile Include="MS\Internal\AvTraceDetails.cs" />
+    <Compile Include="MS\Internal\AvTraceFormat.cs" />
+    <Compile Include="MS\Internal\BaseHashHelper.cs" />
+    <Compile Include="MS\Internal\ComponentModel\APCustomTypeDescriptor.cs" />
+    <Compile Include="MS\Internal\ComponentModel\AttachedPropertyMethodSelector.cs" />
+    <Compile Include="MS\Internal\ComponentModel\AttachInfo.cs" />
+    <Compile Include="MS\Internal\ComponentModel\DependencyObjectPropertyDescriptor.cs" />
+    <Compile Include="MS\Internal\ComponentModel\DependencyObjectProvider.cs" />
+    <Compile Include="MS\Internal\ComponentModel\DependencyPropertyAttribute.cs" />
+    <Compile Include="MS\Internal\ComponentModel\DependencyPropertyKind.cs" />
+    <Compile Include="MS\Internal\ComponentModel\DPCustomTypeDescriptor.cs" />
+    <Compile Include="MS\Internal\ComponentModel\PropertyChangeTracker.cs" />
+    <Compile Include="MS\Internal\ComponentModel\PropertyDescriptorComparer.cs" />
+    <Compile Include="MS\Internal\ComponentModel\PropertyKey.cs" />
+    <Compile Include="MS\Internal\ComponentModel\ReferenceEqualityComparer.cs" />
+    <Compile Include="MS\Internal\ContentType.cs" />
+    <Compile Include="MS\Internal\FreezableDefaultValueFactory.cs" />
+    <Compile Include="MS\Internal\GenericsInstances.cs" />
+    <Compile Include="MS\Internal\InheritanceContextChangedEventManager.cs" />
+    <Compile Include="MS\Internal\InheritanceContextHelper.cs" />
+    <Compile Include="MS\Internal\Interop\ErrorCodes.cs" />
+    <Compile Include="MS\Internal\Interop\NativeStructs.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CaseInsensitiveOrdinalStringComparer.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\Certificate.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\CFStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\CompoundFileDeflateTransform.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\CompoundFileReference.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\CompoundFileStorageReference.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\CompoundFileStreamReference.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\CompressionTransform.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\ContainerUtilities.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\FormatVersion.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\NativeCompoundFileAPIs.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\PrivateUnsafeNativeCompoundFileMethods.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\RightsManagementEncryptedStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\RightsManagementEncryptionTransform.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\StreamWithDictionary.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\UserUseLicenseDictionaryLoader.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\VersionedStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\VersionedStreamOwner.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompoundFile\VersionPair.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompressEmulationStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CompressStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\CustomSignedXml.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\DeflateEmulationStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\IgnoreFlushAndCloseStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\InterleavedZipPartStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\InternalRelationshipCollection.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\OlePropertyStructs.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\PartBasedPackageProperties.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\PartManifestEntry.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\PieceDirectory.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\PieceNameHelper.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\SparseMemoryStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\StorageBasedPackageProperties.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\streamingZipPartStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\TrackingMemoryStream.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\TrackingMemoryStreamFactory.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\XmlDigitalSignatureProcessor.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\XmlSignatureManifest.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\XmlSignatureProperties.cs" />
+    <Compile Include="MS\Internal\IO\Packaging\XmlStringTable.cs" />
+    <Compile Include="MS\Internal\IO\Zip\Crc32.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ProgressiveCrcCalculatingStream.cs" />
+    <Compile Include="MS\Internal\IO\Zip\WriteTimeStream.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipArchive.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipFileInfo.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipFileInfoCollection.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOBlockManager.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOCentralDirectoryBlock.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOCentralDirectoryDigitalSignature.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOCentralDirectoryFileHeader.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOEndOfCentralDirectoryBlock.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOExtraField.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOExtraFieldElement.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOExtraFieldPaddingElement.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOExtraFieldZip64Element.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOFileItemStream.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOLocalFileBlock.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOLocalFileDataDescriptor.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOLocalFileHeader.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOModeEnforcingStream.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIORawDataFileBlock.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOZip64EndOfCentralDirectoryBlock.cs" />
+    <Compile Include="MS\Internal\IO\Zip\ZipIOZip64EndOfCentralDirectoryLocatorBlock.cs" />
+    <Compile Include="MS\Internal\KnownBoxes\KnownBoxes.cs" />
+    <Compile Include="MS\Internal\Markup\CriticalExceptions.cs" />
+    <Compile Include="MS\Internal\Markup\DateTimeConverter2.cs" />
+    <Compile Include="MS\Internal\Markup\ReflectionHelper.cs" />
+    <Compile Include="MS\Internal\Markup\RuntimeIdentifierPropertyAttribute.cs" />
+    <Compile Include="MS\Internal\Markup\TypeConverterHelper.cs" />
+    <Compile Include="MS\Internal\Markup\TypeTypeConverter.cs" />
+    <Compile Include="MS\Internal\Markup\XmlCompatibilityReader.cs" />
+    <Compile Include="MS\Internal\Markup\XmlWrappingReader.cs" />
+    <Compile Include="MS\Internal\NamedObject.cs" />
+    <Compile Include="MS\Internal\ObservableCollectionDefaultValueFactory.cs" />
+    <Compile Include="MS\Internal\Permissions\CompoundFileIOPermission.cs" />
+    <Compile Include="MS\Internal\Permissions\RightsManagementPermission.cs" />
+    <Compile Include="MS\Internal\Permissions\UserInitiatedRoutedEventPermission.cs" />
+    <Compile Include="MS\Internal\Permissions\UserInitiatedRoutedEventPermissionAttribute.cs" />
+    <Compile Include="MS\Internal\PlatformCulture.cs" />
+    <Compile Include="MS\Internal\Security\AttachmentService.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\CallbackHandler.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\ClientSession.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\Errors.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\InternalSafeNativeMethods.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\IssuanceLicense.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\NativeRightsManagementAPIsStructures.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\RevocationPoint.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\RightNameExpirationInfoPair.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\SafeRightsManagementEnvironmentHandle.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\SafeRightsManagementHandle.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\SafeRightsManagementPubHandle.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\SafeRightsManagementQueryHandle.cs" />
+    <Compile Include="MS\Internal\Security\RightsManagement\SafeRightsManagementSessionHandle.cs" />
+    <Compile Include="MS\Internal\ShutDownListener.cs" />
+    <Compile Include="MS\Internal\TraceLevelStore.cs" />
+    <Compile Include="MS\Internal\Utilities.cs" />
+    <Compile Include="MS\Internal\Utility\ReadOnlyDictionary.cs" />
+    <Compile Include="MS\Internal\Utility\WeakReferenceKey.cs" />
+    <Compile Include="MS\Internal\Verify.cs" />
+    <Compile Include="MS\Internal\WeakEventTable.cs" />
+    <Compile Include="MS\Internal\WindowsBase\FriendAccessAllowedAttribute.cs" />
+    <Compile Include="MS\Win32\SplashScreenNativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Collections\ObjectModel\WeakReadOnlyCollection.cs" />
+    <Compile Include="System\Collections\Specialized\CollectionChangedEventManager.cs" />
+    <Compile Include="System\ComponentModel\CurrentChangedEventManager.cs" />
+    <Compile Include="System\ComponentModel\CurrentChangingEventArgs.cs" />
+    <Compile Include="System\ComponentModel\CurrentChangingEventManager.cs" />
+    <Compile Include="System\ComponentModel\DependencyPropertyDescriptor.cs" />
+    <Compile Include="System\ComponentModel\GroupDescription.cs" />
+    <Compile Include="System\ComponentModel\IItemProperties.cs" />
+    <Compile Include="System\ComponentModel\PropertyChangedEventManager.cs" />
+    <Compile Include="System\ComponentModel\PropertyFilterAttribute.cs" />
+    <Compile Include="System\ComponentModel\SortDescription.cs" />
+    <Compile Include="System\ComponentModel\SortDescriptionCollection.cs" />
+    <Compile Include="System\Diagnostics\PresentationTraceSources.cs" />
+    <Compile Include="System\IO\FileFormatException.cs" />
+    <Compile Include="System\IO\Packaging\DataSpaceManager.cs" />
+    <Compile Include="System\IO\Packaging\EncryptedPackage.cs" />
+    <Compile Include="System\IO\Packaging\Package.cs" />
+    <Compile Include="System\IO\Packaging\PackageDigitalSignature.cs" />
+    <Compile Include="System\IO\Packaging\PackageDigitalSignatureManager.cs" />
+    <Compile Include="System\IO\Packaging\PackagePart.cs" />
+    <Compile Include="System\IO\Packaging\PackagePartCollection.cs" />
+    <Compile Include="System\IO\Packaging\PackageProperties.cs" />
+    <Compile Include="System\IO\Packaging\PackageRelationship.cs" />
+    <Compile Include="System\IO\Packaging\PackageRelationshipCollection.cs" />
+    <Compile Include="System\IO\Packaging\PackageRelationshipSelector.cs" />
+    <Compile Include="System\IO\Packaging\PackUriHelper.cs" />
+    <Compile Include="System\IO\Packaging\RightsManagementInformation.cs" />
+    <Compile Include="System\IO\Packaging\StorageInfo.cs" />
+    <Compile Include="System\IO\Packaging\StorageRoot.cs" />
+    <Compile Include="System\IO\Packaging\StreamInfo.cs" />
+    <Compile Include="System\IO\Packaging\ZipPackage.cs" />
+    <Compile Include="System\IO\Packaging\ZipPackagePart.cs" />
+    <Compile Include="System\Security\Permissions\mediapermission.cs" />
+    <Compile Include="System\Security\Permissions\WebBrowserPermission.cs" />
+    <Compile Include="System\Security\RightsManagement\CryptoProvider.cs" />
+    <Compile Include="System\Security\RightsManagement\Exceptions.cs" />
+    <Compile Include="System\Security\RightsManagement\Grant.cs" />
+    <Compile Include="System\Security\RightsManagement\LocalizedNameDescriptionPair.cs" />
+    <Compile Include="System\Security\RightsManagement\PublishLicense.cs" />
+    <Compile Include="System\Security\RightsManagement\SecureEnvironment.cs" />
+    <Compile Include="System\Security\RightsManagement\UnsignedPublishLicense.cs" />
+    <Compile Include="System\Security\RightsManagement\UseLicense.cs" />
+    <Compile Include="System\Security\RightsManagement\User.cs" />
+    <Compile Include="System\Windows\AttachedPropertyBrowsableAttribute.cs" />
+    <Compile Include="System\Windows\AttachedPropertyBrowsableForTypeAttribute.cs" />
+    <Compile Include="System\Windows\AttachedPropertyBrowsableWhenAttributePresentAttribute.cs" />
+    <Compile Include="System\Windows\Converters\Int32RectValueSerializer.cs" />
+    <Compile Include="System\Windows\Converters\PointValueSerializer.cs" />
+    <Compile Include="System\Windows\Converters\RectValueSerializer.cs" />
+    <Compile Include="System\Windows\Converters\SizeValueSerializer.cs" />
+    <Compile Include="System\Windows\Converters\VectorValueSerializer.cs" />
+    <Compile Include="System\Windows\Data\DataSourceProvider.cs" />
+    <Compile Include="System\Windows\DeferredReference.cs" />
+    <Compile Include="System\Windows\DependencyObject.cs" />
+    <Compile Include="System\Windows\DependencyObjectType.cs" />
+    <Compile Include="System\Windows\DependencyProperty.cs" />
+    <Compile Include="System\Windows\DependencyPropertyChangedEventArgs.cs" />
+    <Compile Include="System\Windows\DependencyPropertyKey.cs" />
+    <Compile Include="System\Windows\DependencyPropertyValueSerializer.cs" />
+    <Compile Include="System\Windows\DependencySource.cs" />
+    <Compile Include="System\Windows\DependentList.cs" />
+    <Compile Include="System\Windows\EffectiveValueEntry.cs" />
+    <Compile Include="System\Windows\EntryIndex.cs" />
+    <Compile Include="System\Windows\Expression.cs" />
+    <Compile Include="System\Windows\ExpressionConverter.cs" />
+    <Compile Include="System\Windows\Freezable.cs" />
+    <Compile Include="System\Windows\Input\KeyConverter.cs" />
+    <Compile Include="System\Windows\Input\KeyInterop.cs" />
+    <Compile Include="System\Windows\Input\KeyValueSerializer.cs" />
+    <Compile Include="System\Windows\Input\ModifierKeysConverter.cs" />
+    <Compile Include="System\Windows\Input\ModifierKeysValueSerializer.cs" />
+    <Compile Include="System\Windows\Input\TraversalRequest.cs" />
+    <Compile Include="System\Windows\Int32Rect.cs" />
+    <Compile Include="System\Windows\Int32RectConverter.cs" />
+    <Compile Include="System\Windows\Interop\ComponentDispatcher.cs" />
+    <Compile Include="System\Windows\Interop\ComponentDispatcherThread.cs" />
+    <Compile Include="System\Windows\Interop\MSG.cs" />
+    <Compile Include="System\Windows\LocalValueEnumerator.cs" />
+    <Compile Include="System\Windows\Markup\DateTimeValueSerializerContext.cs" />
+    <Compile Include="System\Windows\Markup\DesignerSerializationOptionsAttribute.cs" />
+    <Compile Include="System\Windows\Markup\InternalTypeHelper.cs" />
+    <Compile Include="System\Windows\Markup\Primitives\MarkupObject.cs" />
+    <Compile Include="System\Windows\Markup\Primitives\MarkupProperty.cs" />
+    <Compile Include="System\Windows\Markup\ServiceProviders.cs" />
+    <Compile Include="System\Windows\Media\Converters\MatrixValueSerializer.cs" />
+    <Compile Include="System\Windows\Media\DisableDpiAwarenessAttribute.cs" />
+    <Compile Include="System\Windows\Media\Matrix.cs" />
+    <Compile Include="System\Windows\Media\MatrixConverter.cs" />
+    <Compile Include="System\Windows\NameScope.cs" />
+    <Compile Include="System\Windows\Point.cs" />
+    <Compile Include="System\Windows\PointConverter.cs" />
+    <Compile Include="System\Windows\PropertyChangedCallback.cs" />
+    <Compile Include="System\Windows\PropertyMetadata.cs" />
+    <Compile Include="System\Windows\Rect.cs" />
+    <Compile Include="System\Windows\RectConverter.cs" />
+    <Compile Include="System\Windows\Size.cs" />
+    <Compile Include="System\Windows\SizeConverter.cs" />
+    <Compile Include="System\Windows\SplashScreen.cs" />
+    <Compile Include="System\Windows\Threading\Dispatcher.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherEventArgs.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherExceptionEventArgs.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherExceptionFilterEventArgs.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherFrame.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherHookEventArgs.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherHooks.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherObject.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherOperation.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherProcessingDisabled.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherSynchronizationContext.cs" />
+    <Compile Include="System\Windows\Threading\DispatcherTimer.cs" />
+    <Compile Include="System\Windows\Threading\ExceptionWrapper.cs" />
+    <Compile Include="System\Windows\Threading\PriorityChain.cs" />
+    <Compile Include="System\Windows\Threading\PriorityItem.cs" />
+    <Compile Include="System\Windows\Threading\PriorityQueue.cs" />
+    <Compile Include="System\Windows\Threading\PriorityRange.cs" />
+    <Compile Include="System\Windows\UncommonField.cs" />
+    <Compile Include="System\Windows\Vector.cs" />
+    <Compile Include="System\Windows\VectorConverter.cs" />
+    <Compile Include="System\Windows\WeakEventManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="System\Windows\Int32Rect.cs1" />
+    <None Include="System\Windows\Media\Matrix.cs2" />
+    <None Include="System\Windows\Point.cs3" />
+    <None Include="System\Windows\Rect.cs4" />
+    <None Include="System\Windows\Size.cs5" />
+    <None Include="System\Windows\Vector.cs6" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
